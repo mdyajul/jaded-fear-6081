@@ -9,7 +9,7 @@ function NavbarA(){
       <Image src='https://akm-img-a-in.tosshub.com/sites/all/themes/itg/logo.png?v=1.52'/>
       <Link fontSize='25px' _hover={{color:'orange'}} marginTop='25px'>APP</Link>
       <Link fontSize='25px' _hover={{color:'orange'}} marginTop='25px'>MAGAZINE</Link>
-</Box>
+    </Box>
     </>
 }
 

@@ -13,7 +13,7 @@ function MiddleSideThree() {
         getBusiness().then((res) => setData(res.data.articles
             ))
     },[])
-    console.log(data)
+   // console.log(data)
 return <Container w='full'>
     <Grid 
     w='full'
@@ -25,6 +25,7 @@ return <Container w='full'>
     border="1px solid red"
     gap={6}
     >
+        <Text textAlign='centre' fontSize='22px' margin='auto' >Business</Text>
         {
             data.map((news) => 
              <GridItem key={news.id} textAlign='left'>

@@ -1,14 +1,17 @@
-import { Box, HStack, Link } from "@chakra-ui/react"
+import { Box, HStack } from "@chakra-ui/react"
+import {Routes, Route, Link} from 'react-router-dom'
+import Headline from "../Headline/Headline"
+import MiddleSide from "../Middle/MiddleSide"
 
 function NavbarB() {
     return <>
     <HStack spacing='0px' bg='#a00606' color='white' >
 <Box w='150px' h='40px'  borderRight='1px solid black' alignItems='center' display='flex' justifyContent='center'>
-    <Link _hover={{color:'orange'}}>HOME</Link>
+    <Link _hover={{color:'orange'}} to='/'>HOME</Link>
   </Box>
   <Box w='90px' h='40px'  borderRight='1px solid black' alignItems='center' display='flex' justifyContent='center'>
   
-  <Link color='orange'>MY FEED</Link>
+  <Link color='orange' to='/myfeed'>MY FEED</Link>
 
   </Box>
   <Box w='60px' h='40px'  borderRight='1px solid black' alignItems='center' display='flex' justifyContent='center'>
@@ -44,6 +47,11 @@ function NavbarB() {
 
   </Box>
 </HStack>
+    <Routes>
+     <Route path='/' element ={<MiddleSide/>}>Home</Route>
+     <Route path="/myfeed"  >My feed</Route>
+
+    </Routes> 
     </>
 }
 export default NavbarB
