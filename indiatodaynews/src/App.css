@@ -12,7 +12,8 @@
   border: 1px solid green;
   height: 100vh;
   overflow: scroll;
-  
+  padding: 10px;
+  margin-left: 10px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

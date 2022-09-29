@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { useState } from "react"
-import { getData } from "../Middle/Api/api"
+import { getData, getPost } from "../Middle/Api/api"
 import {Box, Divider, Text} from '@chakra-ui/react'
 
 function Post() {
@@ -8,7 +8,7 @@ const [data, setData] = useState([])
 
 
 useEffect(() => {
-getData().then((res) => setData(res.data.articles))
+getPost().then((res) => setData(res.data.News))
 },[])
     console.log(data)
 return (

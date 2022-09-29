@@ -4,7 +4,7 @@ import { Box, Container, Grid, GridItem, Image, Text, Divider, List, ListItem, L
 import {Icon} from '@chakra-ui/icons'
 import { Link } from "react-router-dom";
 import { getHeadline } from "../Middle/Api/api";
-import Post from "./Post";
+ 
 
 function Headline(){
     const [data, setData] = useState([])
@@ -21,10 +21,10 @@ function Headline(){
 
    // console.log(data)
 return (
-<Container maxW='full' >
+<Box maxW='full' >
 
     <Grid 
-    w='full'
+     
     templateColumns={{
         base: 'repeat(1, 1fr)',
         md: 'repeat(1, 1fr)',
@@ -32,7 +32,7 @@ return (
     }}
     border="1px solid red"
      
-    p={10}
+   
     >
      
         {
@@ -42,22 +42,22 @@ return (
                  
                  border='1px solid green'
                    w='100%'
-                  maxW='50%' 
+                  p={6}
                  margin='auto'
                 >
                     <VStack>
                     <Text textAlign='centre' fontSize='22px' >Top Headlines</Text>
                     <Box>
-                <Image  boxSize='full' src={news.urlToImage}/>
+                <Image  boxSize='400px' w='550px' h='300px' src={news.urlToImage}/>
                 </Box>
                 <Divider/>
-                <Box>
-                <Text fontSize='22px' marginLeft='5px'>{news.title}</Text>  
+                <Box w='70%'>
+                <Text fontSize='30px' marginLeft='5px'>{news.title}</Text>  
                 </Box> 
                 <Divider/>
                  
                
-                <Box color="blue" textAlign='right' marginRight='20px'>
+                <Box color="blue" textAlign='right' marginRight='10px'>
                     <Link  >MORE FROM MOVIES</Link>
                 </Box>
                     </VStack>
@@ -76,7 +76,7 @@ return (
     
     </Grid>
     
-</Container>
+</Box>
  
 )
 }

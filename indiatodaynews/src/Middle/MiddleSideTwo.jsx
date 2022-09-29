@@ -26,9 +26,9 @@ return <Container w='full'>
         <Text textAlign='centre' fontSize='22px' margin='auto' >Sports</Text>
         {
             data.map((news) => 
-             <GridItem key={news.id} textAlign='left'>
+             <GridItem key={news.id} textAlign='left' h='700px' overflow='hidden'>
                 <Box>
-                <Image boxSize='full' src={news.urlToImage}/>
+                <Image boxSize='full' h='250px' src={news.urlToImage}/>
                 </Box>
                 <Divider/>
                 <Box>
