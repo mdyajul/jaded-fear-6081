@@ -11,7 +11,7 @@ function MiddleSideOne() {
         getData().then((res) => setData(res.data.articles
             ))
     },[])
-    console.log(data)
+   // console.log(data)
 return <Container w='full'>
     <Grid 
     w='full'
@@ -23,11 +23,13 @@ return <Container w='full'>
     border="1px solid red"
     gap={6}
     >
+        <Text textAlign='centre' fontSize='22px' margin='auto' >Movies</Text>
         {
             data.map((news) => 
-             <GridItem key={news.id} textAlign='left'>
+             <GridItem key={news.id} textAlign='left'   h='700px' overflow='hidden' >
+                 
                 <Box>
-                <Image boxSize='full' src={news.urlToImage}/>
+                <Image boxSize='full' h='250px' src={news.urlToImage}/>
                 </Box>
                 <Divider/>
                 <Box>
