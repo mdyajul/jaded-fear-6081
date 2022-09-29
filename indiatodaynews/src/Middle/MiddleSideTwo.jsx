@@ -20,10 +20,10 @@ return <Container w='full'>
         md: 'repeat(1, 1fr)',
         lg: 'repeat(1, 1fr)'
     }}
-    border="1px solid red"
+     
     gap={6}
     >
-        <Text textAlign='centre' fontSize='22px' margin='auto' >Sports</Text>
+        <Text textAlign='centre' fontSize='30px' margin='auto' >Politics</Text>
         {
             data.map((news) => 
              <GridItem key={news.id} textAlign='left' h='700px' overflow='hidden'>
