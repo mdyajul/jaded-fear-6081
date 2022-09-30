@@ -5,7 +5,9 @@ import Headline from './Headline/Headline';
 import MiddleSide from './Middle/MiddleSide';
 import NavbarA from './Navbar/NavbarA';
 import NavbarB from './Navbar/NavbarB';
-
+import NavbarC from './Navbar/DemoNavbar/NavbarC';
+import React from 'react';
+import AllRoutes from './Navbar/AllRoutes';
 
 function App() {
   
@@ -13,7 +15,12 @@ function App() {
   return (
     <>
   <NavbarA/>
-  <NavbarB/>
+  {/* <NavbarB/> */}
+  <React.Fragment>
+    <NavbarC/>
+    
+  </React.Fragment>
+  
 
   
     </>

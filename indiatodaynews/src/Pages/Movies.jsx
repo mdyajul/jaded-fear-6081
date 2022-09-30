@@ -2,7 +2,8 @@ import { Box, Container, Flex, Grid ,GridItem, Text, Image, Divider, Button} fro
 import {useState, useEffect} from 'react'
  
 import { getMovies } from "./Api/api"
-import Read from "./Read/Read"
+import MoviesRead from "./Read/MoviesRead"
+ 
  
 
 
@@ -65,7 +66,8 @@ function Movies() {
       </Flex>
       )
      }
-     <Flex gap='10px' margin='auto' direction='row'>
+      <Grid gap='10px' margin='auto' direction='row'>
+   <GridItem >
    <Button disabled={page === 1} onClick={() => setPage(page - 1 )}>Prev</Button>
    <Button>{page}</Button>
    <Button>{page + 1}</Button>
@@ -77,8 +79,9 @@ function Movies() {
    <Button>{page + 7}</Button>
    <Button>{page + 8}</Button>
    <Button onClick={() => setPage(page + 1 )}>Next</Button>
-
-     </Flex>
+   </GridItem>
+   
+     </Grid>
    </GridItem>
    <GridItem colSpan={1} w='100%' >
          <Box w='100%'  p={4} border='1px solid gray' bg='gray.200'>
@@ -86,7 +89,7 @@ function Movies() {
          <Image boxSize='full'  src='https://tpc.googlesyndication.com/simgad/4392009448719519744'/>
         </Box>
         <Box>
-        <Read/>
+       <MoviesRead/>
         </Box>
    </GridItem>
    

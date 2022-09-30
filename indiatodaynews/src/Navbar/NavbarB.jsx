@@ -1,19 +1,15 @@
-import { Box, HStack } from "@chakra-ui/react"
+import { Box, Flex, HStack, Stack, Switch } from "@chakra-ui/react"
 import {Routes, Route, Link} from 'react-router-dom'
-import Headline from "../Headline/Headline"
-import MiddleSide from "../Middle/MiddleSide"
-import Business from "../Pages/Business"
-import India from "../Pages/India"
-import Movies from "../Pages/Movies"
-import MyFeed from "../Pages/MyFeed"
-import Science from "../Pages/Science"
-import Sports from "../Pages/Sports"
-import World from "../Pages/World"
-import Tech from "../Pages/Tech"
+ 
+import AllRoutes from "./AllRoutes"
+import DrawerExample from "./Drawer"
+import MenuIconList from "./Menu"
+ 
+ 
 
 function NavbarB() {
     return <>
-    <HStack spacing='0px' bg='#a00606' color='white' >
+    <Flex spacing='0px' bg='#a00606' color='white' >
 <Box w='150px' h='40px'  borderRight='1px solid black' alignItems='center' display='flex' justifyContent='center'>
     <Link _hover={{color:'orange'}} to='/'>HOME</Link>
   </Box>
@@ -50,20 +46,16 @@ function NavbarB() {
   <Link _hover={{color:'orange'}} to='/science'>SCIENCE</Link>
 
   </Box>
+  <Box>
+  
+    <DrawerExample/>
+  </Box>
  
-</HStack>
-    <Routes>
-     <Route path='/' element ={<MiddleSide/>}>Home</Route>
-     <Route path="/myfeed" element={<MyFeed/>} >My feed</Route>
-     <Route path="/india" element={<India/>} >INDIA</Route>
-     <Route path="/world" element={<World/>} >WORLD</Route>
-     <Route path="/business" element={<Business/>} >BUSINESS</Route>
-     <Route path="/tech" element={<Tech/>} >TECH</Route>
-     <Route path="/movies" element={<Movies/>} >MOVIES</Route>
-     <Route path="/sports" element={<Sports/>} >SPORTS</Route>
-     <Route path="/science" element={<Science/>} >SCIENCE</Route>
-    
-    </Routes> 
+    {/* <ToggleTheme/> */}
+ 
+  
+</Flex>
+   <AllRoutes/>
     </>
 }
 export default NavbarB

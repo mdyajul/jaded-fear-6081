@@ -1,8 +1,9 @@
 import { Box, Container, Flex, Grid ,GridItem, Text, Image, Divider, Button} from "@chakra-ui/react"
 import {useState, useEffect} from 'react'
 import { getBusiness } from "./Api/api"
+import BusinessRead from "./Read/BusinessRead"
  
-import Read from "./Read/Read"
+ 
 
 
 
@@ -56,7 +57,8 @@ function Business() {
             </Flex>
             )
            }
-              <Flex gap='10px' margin='auto' direction='row'>
+                 <Grid gap='10px' margin='auto' direction='row'>
+   <GridItem >
    <Button disabled={page === 1} onClick={() => setPage(page - 1 )}>Prev</Button>
    <Button>{page}</Button>
    <Button>{page + 1}</Button>
@@ -68,8 +70,9 @@ function Business() {
    <Button>{page + 7}</Button>
    <Button>{page + 8}</Button>
    <Button onClick={() => setPage(page + 1 )}>Next</Button>
-
-     </Flex>
+   </GridItem>
+   
+     </Grid>
          </GridItem>
          <GridItem colSpan={1} w='100%' >
          <Box w='100%'  p={4} border='1px solid gray' bg='gray.200'>
@@ -77,7 +80,7 @@ function Business() {
          <Image boxSize='full'  src='https://tpc.googlesyndication.com/simgad/4392009448719519744'/>
         </Box>
         <Box>
-        <Read/>
+         <BusinessRead/>
         </Box>
    </GridItem>
      

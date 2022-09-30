@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 function MiddleSideOne() {
     const [data, setData] = useState([])
 
+     
     useEffect(() => {
         getData().then((res) => setData(res.data.articles
             ))
@@ -47,7 +48,7 @@ return <Container w='full'>
                     </ListItem>
                 </UnorderedList>
                 <Box color="blue" textAlign='right' marginRight='20px'>
-                    <Link  >MORE FROM Healths</Link>
+                    <Link to={`/${news.id}`} >MORE FROM Healths</Link>
                 </Box>
              </GridItem>
             )
