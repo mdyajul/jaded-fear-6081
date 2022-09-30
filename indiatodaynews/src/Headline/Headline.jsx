@@ -30,7 +30,7 @@ return (
         md: 'repeat(1, 1fr)',
         lg: 'repeat(1, 1fr)'
     }}
-    border="1px solid red"
+    border="1px solid gray"
      
    
     >
@@ -40,9 +40,9 @@ return (
              <GridItem key={news.id} textAlign='left' w='100%'>
                 <Box 
                  
-                 border='1px solid green'
+                 
                    w='100%'
-                  p={6}
+                  p={4}
                  margin='auto'
                 >
                     <VStack>
@@ -55,11 +55,7 @@ return (
                 <Text fontSize='30px' marginLeft='5px'>{news.title}</Text>  
                 </Box> 
                 <Divider/>
-                 
-               
-                <Box color="blue" textAlign='right' marginRight='10px'>
-                    <Link  >MORE FROM MOVIES</Link>
-                </Box>
+                   
                     </VStack>
                 </Box>
                 
@@ -67,10 +63,10 @@ return (
              
             )
         }
-        <Stack margin='auto'  spacing={4} direction='row' marginTop='10px' >
-        <Button disabled={page === 1} onClick={() => setPage(page - 1)}>-</Button>
+        <Stack margin='auto'  spacing={4} direction='row' marginTop='10px' marginBottom='10px'>
+        <Button disabled={page === 1} onClick={() => setPage(page - 1)}>Prev</Button>
         <Button>{page}</Button>
-       <Button onClick={() => setPage(page + 1)}>+</Button>
+       <Button onClick={() => setPage(page + 1)}>Next</Button>
 
         </Stack>
     

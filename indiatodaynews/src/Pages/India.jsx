@@ -1,6 +1,7 @@
 import { Box, Container, Flex, Grid ,GridItem, Text, Image, Divider, Button} from "@chakra-ui/react"
 import {useState, useEffect} from 'react'
 import { getIndia } from "./Api/api"
+import IndiaRead from "./Read/IndiaRead"
  
 import Read from "./Read/Read"
 
@@ -56,21 +57,22 @@ function India() {
             </Flex>
             )
            }
-              <Flex gap='10px' margin='auto' direction='row'>
+    <Grid gap='10px' margin='auto' direction='row'>
+   <GridItem >
    <Button disabled={page === 1} onClick={() => setPage(page - 1 )}>Prev</Button>
    <Button>{page}</Button>
-   <Button>{page + 1}</Button>
-   <Button>{page + 2}</Button>
-   <Button>{page + 3}</Button>
-   <Button>{page + 4}</Button>
-   <Button>{page + 5}</Button>
-   <Button>{page + 6}</Button>
-   <Button>{page + 7}</Button>
-   <Button>{page + 8}</Button>
-
-   <Button onClick={() => setPage(page + 1 )}>Next</Button>
-
-     </Flex>
+   <Button onClick={() => setPage(page + 1 )}>{page + 1}</Button>
+   <Button onClick={() => setPage(page + 2)}>{page  + 2}</Button>
+   <Button onClick={() => setPage(page + 3 )}>{page + 3}</Button>
+   <Button onClick={() => setPage(page + 4 )}>{page + 4}</Button>
+   <Button onClick={() => setPage(page + 5 )}>{page + 5}</Button>
+   <Button onClick={() => setPage(page + 6 )}>{page + 6}</Button>
+   <Button onClick={() => setPage(page + 7 )}>{page + 7}</Button>
+   <Button onClick={() => setPage(page + 8 )}>{page + 8}</Button>
+   <Button onClick={() => setPage(page + 9 )}>Next</Button>
+   </GridItem>
+   
+     </Grid>
          </GridItem>
          <GridItem colSpan={1} w='100%' >
          <Box w='100%'  p={4} border='1px solid gray' bg='gray.200'>
@@ -78,7 +80,7 @@ function India() {
          <Image boxSize='full'  src='https://tpc.googlesyndication.com/simgad/4392009448719519744'/>
         </Box>
         <Box>
-        <Read/>
+        <IndiaRead/>
         </Box>
    </GridItem>
      
