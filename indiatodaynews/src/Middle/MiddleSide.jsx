@@ -1,4 +1,5 @@
 import { Box, Center, Container, Flex, Grid, GridItem, Image } from "@chakra-ui/react"
+import Footer from "../Headline/Footer"
 import Headline from "../Headline/Headline"
 import Post from "../Headline/Post"
 import Home from "../Home/Home"
@@ -10,6 +11,7 @@ import MiddleSideTwo from "./MiddleSideTwo"
 function MiddleSide() {
 
     return (
+        <>
     <Container maxW={{base: "full", md: "container.xl"}} marginTop='20px'>
             <Image margin='auto' marginBottom='20px' src="https://tpc.googlesyndication.com/simgad/8082389582056063472"/>
         
@@ -67,6 +69,8 @@ function MiddleSide() {
         
        </Grid>
     </Container>
+    <Footer/>
+    </>
     )
 }
 

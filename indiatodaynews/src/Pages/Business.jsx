@@ -1,5 +1,6 @@
 import { Box, Container, Flex, Grid ,GridItem, Text, Image, Divider, Button} from "@chakra-ui/react"
 import {useState, useEffect} from 'react'
+import Footer from "../Headline/Footer"
 import { getBusiness } from "./Api/api"
 import BusinessRead from "./Read/BusinessRead"
  
@@ -20,6 +21,7 @@ function Business() {
     fetchIndia(page)
   },[page])
     return (
+      <>
       <Container  maxW='90%' marginTop='20px'>
             <Image margin='auto' marginBottom='20px' src="https://tpc.googlesyndication.com/simgad/8082389582056063472"/>
         
@@ -37,9 +39,9 @@ function Business() {
          <GridItem colSpan={2} w='100%' >
           
          <Text fontSize='20px' color='gray.400'>News/Business</Text>
-         <Divider/>
+         <hr/>
           <Text fontSize='40px' fontFamily='bolder'>Business</Text>
-         <Divider marginBottom='20px'/>
+         <hr marginBottom='20px'/>
 
            {
             data.map((news) => 
@@ -57,20 +59,61 @@ function Business() {
             </Flex>
             )
            }
-                 <Grid gap='10px' margin='auto' direction='row'>
-   <GridItem >
-   <Button disabled={page === 1} onClick={() => setPage(page - 1 )}>Prev</Button>
-   <Button>{page}</Button>
-   <Button>{page + 1}</Button>
-   <Button>{page + 2}</Button>
-   <Button>{page + 3}</Button>
-   <Button>{page + 4}</Button>
-   <Button>{page + 5}</Button>
-   <Button>{page + 6}</Button>
-   <Button>{page + 7}</Button>
-   <Button>{page + 8}</Button>
-   <Button onClick={() => setPage(page + 1 )}>Next</Button>
+                <Grid   
+    w='70%'
+    m='auto'
+     templateColumns={{
+      base: 'repeat(4, 1fr)',
+      md: 'repeat(6, 1fr)',
+      lg: 'repeat(11, 1fr)'
+            }}
+     
+     gap={4}
+    >
+   <GridItem>
+   <button disabled={page === 1} onClick={() => setPage(page - 1 )} style={{backgroundColor:'#a00606',color:'white', padding:'8px 15px', borderRadius:'10px' }} >Prev</button>
    </GridItem>
+   <GridItem>
+    <button style={{backgroundColor:'#a00606', color:'white', padding:'8px 15px', borderRadius:'10px'}}>{page}</button>
+   </GridItem>
+   <GridItem>
+   <button onClick={() => setPage(page + 1 )} style={{backgroundColor:'#a00606', color:'white', padding:'8px 15px', borderRadius:'10px'}} >{page + 1}</button>
+
+   </GridItem>
+   <GridItem>
+   <button onClick={() => setPage(page + 2)} style={{backgroundColor:'#a00606', color:'white', padding:'8px 15px', borderRadius:'10px'}} >{page  + 2}</button>
+
+   </GridItem>
+   <GridItem>
+   <button onClick={() => setPage(page + 3 )} style={{backgroundColor:'#a00606', color:'white', padding:'8px 15px', borderRadius:'10px'}}>{page + 3}</button>
+
+    </GridItem> 
+    <GridItem>
+    <button onClick={() => setPage(page + 4 )} style={{backgroundColor:'#a00606', color:'white', padding:'8px 15px', borderRadius:'10px'}}>{page + 4}</button>
+
+    </GridItem>
+    <GridItem>
+    <button onClick={() => setPage(page + 5 )} style={{backgroundColor:'#a00606', color:'white', padding:'8px 15px', borderRadius:'10px'}}>{page + 5}</button>
+
+    </GridItem>
+<GridItem>
+<button onClick={() => setPage(page + 6 )} style={{backgroundColor:'#a00606', color:'white', padding:'8px 15px', borderRadius:'10px'}}>{page + 6}</button>
+
+</GridItem>
+<GridItem>
+<button onClick={() => setPage(page + 7 )} style={{backgroundColor:'#a00606', color:'white', padding:'8px 15px', borderRadius:'10px'}}>{page + 7}</button>
+
+</GridItem>
+
+<GridItem>
+<button onClick={() => setPage(page + 8 )} style={{backgroundColor:'#a00606', color:'white', padding:'8px 15px', borderRadius:'10px'}}>{page + 8}</button>
+
+</GridItem>
+<GridItem>
+<button onClick={() => setPage(page + 9 )} style={{backgroundColor:'#a00606', color:'white', padding:'8px 15px', borderRadius:'10px'}}>Next</button>
+
+</GridItem>
+   
    
      </Grid>
          </GridItem>
@@ -87,6 +130,8 @@ function Business() {
          </Grid>
          
       </Container>
+      <Footer/>
+      </>
     )
 }
 export default Business

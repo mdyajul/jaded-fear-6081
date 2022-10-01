@@ -50,11 +50,11 @@ return (
                     <Box>
                 <Image  boxSize='400px' w='550px' h='300px' src={news.urlToImage}/>
                 </Box>
-                <Divider/>
+                <hr/>
                 <Box w='70%'>
                 <Text fontSize='30px' marginLeft='5px'>{news.title}</Text>  
                 </Box> 
-                <Divider/>
+                <hr/>
                    
                     </VStack>
                 </Box>
@@ -64,9 +64,9 @@ return (
             )
         }
         <Stack margin='auto'  spacing={4} direction='row' marginTop='10px' marginBottom='10px'>
-        <Button disabled={page === 1} onClick={() => setPage(page - 1)}>Prev</Button>
-        <Button>{page}</Button>
-       <Button onClick={() => setPage(page + 1)}>Next</Button>
+        <button disabled={page === 1} onClick={() => setPage(page - 1)} style={{backgroundColor:'#a00606', color:'white', padding:'8px 15px', borderRadius:'10px'}}>Prev</button>
+        <button style={{backgroundColor:'#a00606', color:'white', padding:'8px 15px', borderRadius:'10px'}}>{page}</button>
+       <button onClick={() => setPage(page + 1)} style={{backgroundColor:'#a00606', color:'white', padding:'8px 15px', borderRadius:'10px'}}>Next</button>
 
         </Stack>
     

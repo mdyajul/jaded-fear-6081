@@ -21,7 +21,7 @@ return (
         data.map((post) => 
         <Box key={post.id}>
       <Text>{post.title}</Text>
-      <Divider/>
+      <hr/>
         </Box>
         )
       }

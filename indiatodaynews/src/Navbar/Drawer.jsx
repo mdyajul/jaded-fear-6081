@@ -46,7 +46,7 @@ function DrawerExample() {
       .then((res) => {
         if(res.token){
           loginUser(res.token);
-          navigate("/myfeed")
+          navigate("/")
         }
         
       })
