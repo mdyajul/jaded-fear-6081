@@ -2,8 +2,8 @@ import axios from "axios";
 
 let key1=`e382f28068514d9e9ac1c831b61820af`
 let key3=`b03852aed1984e10bd039b6fbc696d00`
-let key2=`ffa22e2f014947329088c827f657fc8f`
-let key4=`65b2b59a1f1946299ca0bed8d1e77774`
+let key4=`ffa22e2f014947329088c827f657fc8f`
+let key2=`65b2b59a1f1946299ca0bed8d1e77774`
 
 export const getIndia= (params={}) => {
     return axios.get(`https://newsapi.org/v2/top-headlines?country=in&apiKey=${key2}`,{

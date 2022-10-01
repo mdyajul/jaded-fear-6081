@@ -30,17 +30,17 @@ return <Container w='full'>
                 <Box>
                 <Image boxSize='full' h='250px' src={news.urlToImage}/>
                 </Box>
-                <Divider/>
+                <hr/>
                 <Box>
                 <Text fontSize='22px' marginLeft='5px'>{news.title}</Text>  
                 </Box> 
-                <Divider/>
+                <hr/>
                  
                 <UnorderedList marginBottom='50px'>
                     <ListItem color='red' marginLeft='10px' fontSize='17px'>         
                         <Text color='black'>{news.content}</Text>
                     </ListItem>
-                    <Divider/>
+                    <hr/>
                     <ListItem color='red' marginLeft='10px' fontSize='17px'>         
                         <Text color='black'>{news.description}</Text>
                     </ListItem>
