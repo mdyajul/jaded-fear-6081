@@ -132,7 +132,7 @@ export const getScienceRead= (params={}) => {
 }
 
 export const getFeed= (params={}) => {
-    return axios.get(`https://newsapi.org/v2/top-headlines?country=ch&apiKey=${key2}`,{
+    return axios.get(`https://newsapi.org/v2/top-headlines?country=ch&apiKey=641cda7f13fd428c8f4e34b39d9d2a99`,{
         params: {
             page: params.page,
             pageSize: params.pageSize
