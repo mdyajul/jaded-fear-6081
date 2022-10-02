@@ -10,7 +10,7 @@ import Sports from "../Pages/Sports"
 import World from "../Pages/World"
 import Tech from "../Pages/Tech"
 import PrivateRoute from '../Context/PrivateRoute'
-import SingleUserPage from '../Middle/SinglePage'
+ 
 
 function AllRoutes() {
 
@@ -70,9 +70,9 @@ function AllRoutes() {
      </PrivateRoute>
      
      } >SCIENCE</Route>
-    <Route path="/everything/:user_id" element={
+    {/* <Route path="/everything/:user_id" element={
         <SingleUserPage/>
-    }></Route>
+    }></Route> */}
     </Routes> 
     </div>
 }

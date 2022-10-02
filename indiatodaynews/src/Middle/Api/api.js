@@ -7,19 +7,19 @@ let key1=`65b2b59a1f1946299ca0bed8d1e77774`
 let key2=`641cda7f13fd428c8f4e34b39d9d2a99`
 
 export const getData= () => {
-    return axios.get(`https://newsapi.org/v2/everything?q=health&sortBy=popularity&pageSize=20&apiKey=${key2}`)
+    return axios.get(`https://newsapi.org/v2/everything?q=health&sortBy=popularity&pageSize=20&apiKey=641cda7f13fd428c8f4e34b39d9d2a99`)
 }
 
 export const getBusiness= () => {
-    return axios.get(`https://newsapi.org/v2/everything?q=india%20crime&sortBy=popularity&pageSize=20&apiKey=${key2}`)
+    return axios.get(`https://newsapi.org/v2/everything?q=india%20crime&sortBy=popularity&pageSize=20&apiKey=641cda7f13fd428c8f4e34b39d9d2a99`)
 }
 
 export const getSports= () => {
-    return axios.get(`https://newsapi.org/v2/everything?q=aap&sortBy=relevancy&pageSize=20&apiKey=${key2}`)
+    return axios.get(`https://newsapi.org/v2/everything?q=aap&sortBy=relevancy&pageSize=20&apiKey=641cda7f13fd428c8f4e34b39d9d2a99`)
 }
 
 export const getHeadline= (params={}) => {
-    return axios.get(`https://newsapi.org/v2/top-headlines?country=in&apiKey=${key2}`,{
+    return axios.get(`https://newsapi.org/v2/top-headlines?country=in&apiKey=641cda7f13fd428c8f4e34b39d9d2a99`,{
         params: {
             page: params.page,
             pageSize: params.pageSize
