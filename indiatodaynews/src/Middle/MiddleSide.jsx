@@ -1,4 +1,4 @@
-import { Box, Center, Container, Flex, Grid, GridItem, Image } from "@chakra-ui/react"
+import { Box, Center, Container, Flex, Grid, GridItem, Hide, Image } from "@chakra-ui/react"
 import Footer from "../Headline/Footer"
 import Headline from "../Headline/Headline"
 import Post from "../Headline/Post"
@@ -28,7 +28,10 @@ function MiddleSide() {
         >
             <GridItem w='100%' colSpan={2}><Headline/></GridItem>
             <GridItem w='100%' colSpan={1}><Post/></GridItem>
+            <Hide below="md">
             <GridItem w='100%%' colSpan={1}><Home/></GridItem>
+
+            </Hide>
 
             
             

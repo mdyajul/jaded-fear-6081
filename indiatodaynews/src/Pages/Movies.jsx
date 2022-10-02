@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Grid ,GridItem, Text, Image, Divider, Button} from "@chakra-ui/react"
+import { Box, Container, Flex, Grid ,GridItem, Text, Image, Hide} from "@chakra-ui/react"
 import {useState, useEffect} from 'react'
 import Footer from "../Headline/Footer"
  
@@ -127,10 +127,12 @@ function Movies() {
      </Grid>
    </GridItem>
    <GridItem colSpan={1} w='100%' >
+   <Hide below='md'>   
          <Box w='100%'  p={4} border='1px solid gray' bg='gray.200'>
             <Text textAlign='center'>Advertisement</Text>
          <Image boxSize='full'  src='https://tpc.googlesyndication.com/simgad/4392009448719519744'/>
         </Box>
+        </Hide>
         <Box>
        <MoviesRead/>
         </Box>

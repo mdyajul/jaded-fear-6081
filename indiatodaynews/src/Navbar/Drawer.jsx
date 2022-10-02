@@ -30,9 +30,9 @@ function DrawerExample() {
     const firstField = React.useRef()
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const { loginUser, authState } = useContext(AppContext);
+    const { loginUser, logoutUser, authState } = useContext(AppContext);
     const navigate = useNavigate();
-
+     
     const handleSubmit = (e) => {
       e.preventDefault()
       fetch("https://reqres.in/api/login", {
@@ -54,11 +54,15 @@ function DrawerExample() {
         console.log(err)
       });
     };
+
+    
     return (
       <>
+       
         <Button leftIcon={<AddIcon />} colorScheme='red.500' variant='outline' onClick={onOpen}>
           Login
         </Button>
+        
         <Drawer
           isOpen={isOpen}
           placement='right'
@@ -71,6 +75,9 @@ function DrawerExample() {
             <DrawerHeader borderBottomWidth='1px'>
               Create a new account
             </DrawerHeader>
+            <Box>
+            <button onClick={logoutUser}>Logout</button>
+        </Box> 
       <form onSubmit={handleSubmit}>
       <DrawerBody>
               <Stack spacing='24px'>
@@ -119,13 +126,13 @@ function DrawerExample() {
             </DrawerBody>
   
             <DrawerFooter borderTopWidth='1px'>
-              {/* <Button variant='outline' mr={3} onClick={onClose}>
+              <Button variant='outline' mr={3} onClick={onClose}>
                 Cancel
-              </Button> */}
+              </Button>
               <Button colorScheme='blue' type="submit">Submit</Button>
             </DrawerFooter>
         </form> 
-           
+ 
           </DrawerContent>
         </Drawer>
       </>

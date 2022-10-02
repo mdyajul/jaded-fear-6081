@@ -1,15 +1,18 @@
  
+import { useContext } from 'react';
 import {useRef} from 'react'
 import {FaBars, FaTimes} from 'react-icons/fa'
 import { Link } from 'react-router-dom';
+import { AppContext } from '../../Context/AppContext';
 import AllRoutes from '../AllRoutes';
 import DrawerExample from '../Drawer';
 import '../Styles/main.css';
+import {Box} from "@chakra-ui/react"
 
 function NavbarC() {
     const navRef = useRef();
-
-    const showNavbar = () => {
+     
+   const showNavbar = () => {
 		navRef.current.classList.toggle("responsive_nav");
 	};
 
@@ -17,7 +20,10 @@ function NavbarC() {
         <>
       
         <header>
-       <DrawerExample/>
+
+              <DrawerExample/>  
+        
+       
         <nav ref={navRef}>
         <Link _hover={{color:'orange'}} to='/'>HOME</Link>
 
